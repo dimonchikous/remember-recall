@@ -5,7 +5,7 @@ Remember-Recall is VERY simple library on c for saving value.
 For using you need to include rcall.h
 
 ## remember()
-rememer() is saving value in integier. Value saving only one time to variable saved.
+remember() is saving value in integier. Value saving only one time to variable saved.
 
 Example:
 ```c
