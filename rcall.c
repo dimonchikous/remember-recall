@@ -1,7 +1,7 @@
 #include "rcall.h"
 #include <stdio.h>
 
-bool rcall_issaved[10]={0};
+int rcall_issaved[10]={0};
 int rcall_saved[10];
 
 void remember(int a, int slot){
