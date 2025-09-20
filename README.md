@@ -5,10 +5,10 @@ Remember-Recall is VERY simple library on c for saving value.
 For using you need to include rcall.h
 
 ## Slots
-In rcall_saved[] you have 11 saves(from 0 to 10). It maded by arrays. You need to specify the slot number.
+In rcall_saved[] you have 10 saves(from 0 to 9). It maded by arrays. You need to specify the slot number.
 
 ## remember()
-remember() is saving value in integier. Value saving to array rcall_saved[]. You have 11 slots in this array.
+remember() is saving value in integier. Value saving to array rcall_saved[]. You have 10 slots in this array.
 
 Form of remember():
 ```c
