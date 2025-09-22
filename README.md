@@ -12,7 +12,7 @@ remember() is saving value in integier. Value saving to array rcall_saved[]. You
 
 Form of remember():
 ```c
-remember(variablei_or_value, slot_num);
+remember(variable_or_value, slot_num);
 ```
 
 Example:
