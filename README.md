@@ -12,7 +12,7 @@ remember() is saving value in integier. Value saving to array rcall_saved[]. You
 
 Form of remember():
 ```c
-remember(variable, slot_num);
+remember(variablei_or_value, slot_num);
 ```
 
 Example:
@@ -49,7 +49,7 @@ cleansave() is fully cleaning saved slot in rcall_saved[]
 
 Form of cleansave()
 ```c
-cleansave(slot_num)
+cleansave(slot_num);
 ```
 
 Example:
@@ -60,8 +60,29 @@ cleansave(5); //cleaning variable saved
 a = recall(5); //error, saved slot has no value. Now a=-1
 ```
 
+## checksave_rcall()
+checksave_rcall() is printing information about save slot.
 
+Form of checksave_rcall()
+```c
+checksave_rcall(slot_num);
+```
 
+Example:
+
+Input:
+```c
+a=60;
+remember(a, 2);
+checksave_rcall(2);
+checksave_rcall(0);
+```
+
+Output:
+```
+slot 2 is saved with value 60
+slot 0 is not saved
+```
 
 
 
