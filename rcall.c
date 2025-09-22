@@ -41,3 +41,18 @@ void cleansave(int slot){
 	else
 		printf("Error: Unknown slot, nothing was cleaned");
 }
+
+void checksave_rcall(int slot){
+       if (slot>=0 && slot <10){
+	       if (rcall_issaved[slot]==1)
+		       printf("slot %d is saved with value %d\n", slot, rcall_saved[slot]);
+	       
+		else if (rcall_issaved[slot]==0)
+			printf("slot %d is not saved\n", slot);
+	        else 
+			printf("Unknown value in issaved[%d] (must be 0 or 1)\n", slot);
+       }
+
+	else
+	 printf("Unknown slot\n");
+}	
