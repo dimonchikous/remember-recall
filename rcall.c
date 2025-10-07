@@ -1,9 +1,10 @@
 #include "rcall.h"
 #include <stdio.h>
 #define MAXSLOTS 10
+#define SLOT_ERROR -1
 
-int rcall_issaved[MAXSLOTS]={0};
-int rcall_saved[MAXSLOTS];
+static int rcall_issaved[MAXSLOTS]={0};
+static int rcall_saved[MAXSLOTS];
 int checkslot(int slot){
 	return slot>=0&&slot<MAXSLOTS;
 }
@@ -14,25 +15,25 @@ void remember(int a, int slot){
 		rcall_issaved[slot] = 1;
 	}
 	else 
-		printf("Error: Unkown slot, nothing was saved\n");
+		printf("Error: Unknown slot, nothing was saved\n");
 }
 
 int recall(int slot){
 	if (checkslot(slot)){
 		if (rcall_issaved[slot]==0){
 			printf("Error:Value not saved! -1 was recalled\n");
-			return -1;
+			return SLOT_ERROR;
 		}
 		else if (rcall_issaved[slot]==1)
 			return rcall_saved[slot];
 		else{ 
 			printf("Unknown error. -1 was recalled\n");
-			return -1;
+			return SLOT_ERROR;
 		}
 	}
 	else{
 		printf("Error: Unknown slot, -1 was recalled\n");
-		return -1;
+		return SLOT_ERROR;
 	}
 
 }
@@ -43,7 +44,7 @@ void cleansave(int slot){
 		rcall_issaved[slot] = 0;
 	}
 	else
-		printf("Error: Unknown slot, nothing was cleaned");
+		printf("Error: Unknown slot, nothing was cleaned\n");
 }
 
 void checksave_rcall(int slot){
