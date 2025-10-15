@@ -84,7 +84,28 @@ slot 2 is saved with value 60
 slot 0 is not saved
 ```
 
+## checkevery_rcall()
+checkevery_rcall() is printing count of saved and not saved slots.
 
+Form of checkevery_rcall()
+```c
+checkevery_rcall()
+```
 
+Example:
 
+Input:
+```c
+/* Usualy MAXSLOTS is 10
+so, here MAXSLOTS is 10 too */
+a=4
+remember(a,2);
+checkevery_rcall();
+```
+
+Output:
+```
+Saved: 1
+Not saved: 9
+```
 
