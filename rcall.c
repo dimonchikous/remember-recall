@@ -62,15 +62,21 @@ void checksave_rcall(int slot){
 	 printf("Unknown slot\n");
 }
 
-void checkevery_rcall(){
+void checkevery_rcall(int quiet){
 	int snum;
 	int fsaved=0;
 	int fnotsaved=0;
 	for (snum=0; snum>= 0 && snum < MAXSLOTS; snum++){
-		if (rcall_issaved[snum] == 1)
+		if (rcall_issaved[snum] == 1){
 			fsaved++;
-		else 
+			if (quiet<1)
+				printf("Slot %d is saved\n", snum);
+		}
+		else{ 
 			fnotsaved++;
+			if (quiet<1)
+				printf("Slot %d is not saved\n", snum);
+		}
 	}
 	printf("Saved: %d\nNot saved: %d\n", fsaved, fnotsaved);
 }
