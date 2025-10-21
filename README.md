@@ -85,11 +85,11 @@ slot 0 is not saved
 ```
 
 ## checkevery_rcall()
-checkevery_rcall() is printing count of saved and not saved slots.
+checkevery_rcall() is printing count of saved and not saved slots. So it can print status of every slots, but you can disable this by changing quiet argument for more than 1.
 
 Form of checkevery_rcall()
 ```c
-checkevery_rcall()
+checkevery_rcall(quiet) //0 and less for printing status of all slots, 1 and more for not printing status of all slots
 ```
 
 Example:
@@ -100,11 +100,26 @@ Input:
 so, here MAXSLOTS is 10 too */
 a=4
 remember(a,2);
-checkevery_rcall();
+checkevery_rcall(1);
+printf("---");
+checkevery_rcal(0);
 ```
 
 Output:
 ```
+Saved: 1
+Not saved: 9
+---
+Slot 0 is not saved
+Slot 1 is not saved
+Slot 2 is saved
+Slot 3 is not saved
+Slot 4 is not saved
+Slot 5 is not saved
+Slot 6 is not saved
+Slot 7 is not saved
+Slot 8 is not saved
+Slot 9 is not saved
 Saved: 1
 Not saved: 9
 ```
