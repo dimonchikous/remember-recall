@@ -101,7 +101,7 @@ so, here MAXSLOTS is 10 too */
 a=4
 remember(a,2);
 checkevery_rcall(1);
-printf("---");
+printf("---\n");
 checkevery_rcal(0);
 ```
 
